@@ -7,7 +7,7 @@ data "aws_secretsmanager_secret_version" "api" {
 }
 
 resource "aws_instance" "secure_app" {
-  ami           = "ami-0c02fb55956c7d316"
+  ami           = "ami-055a9df0c8c9f681c"
   instance_type = "t3.micro"
 
   user_data = templatefile("userdata.sh", {
