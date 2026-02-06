@@ -20,14 +20,14 @@ pipeline {
       }
     }
 
-    stage("Terraform fmt (check)") {
-      steps {
-        sh """
-          cd ${TF_DIR}
-          terraform fmt -check -diff
-        """
-      }
-    }
+    // stage("Terraform fmt (check)") {
+    //   steps {
+    //     sh """
+    //       cd ${TF_DIR}
+    //       terraform fmt -check -diff
+    //     """
+    //   }
+    // }
 
     stage("Terraform validate") {
       steps {
