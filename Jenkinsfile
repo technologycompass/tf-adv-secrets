@@ -29,7 +29,7 @@ pipeline {
       steps {
         sh """
           cd ${TF_DIR}
-          terraform init -backend=false
+          terraform init -reconfigure
           terraform validate
         """
       }
@@ -47,9 +47,9 @@ pipeline {
     }
 
   }
-  post {
-    always {
-      echo "Static validation completed."
-    }
-  }
+  // post {
+  //   always {
+  //     echo "Static validation completed."
+  //   }
+  // }
 }
