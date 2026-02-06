@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 data "aws_secretsmanager_secret_version" "api" {
-  secret_id = "prod/app/api_key"
+  secret_id = "lab/user06/api/api_key"
 }
 
 resource "aws_instance" "secure_app" {
