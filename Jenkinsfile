@@ -50,6 +50,15 @@ pipeline {
       }
     }
 
+    stage("Terraform apply") {
+      steps {
+        sh """
+          cd ${TF_DIR}
+          terraform apply tfplan
+
+        """
+      }
+    }
   }
   // post {
   //   always {
