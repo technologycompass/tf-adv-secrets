@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket       = "tf-state-vishwa-feb26"
+    bucket       = "tf-state-user06-feb26"
     key          = "lab3/terraform.tfstate"
     region       = "us-west-2"
     use_lockfile = true
