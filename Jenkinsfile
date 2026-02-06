@@ -1,6 +1,10 @@
 pipeline {
   agent any
 
+  triggers {
+        pollSCM('H/2 * * * *')   // Every 2 mins
+    }
+
   options {
     timestamps()
   }
